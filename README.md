@@ -19,3 +19,7 @@ Perfect for developers who want inspiration, students looking for practice proje
 
 ## 🚀 Live Demo
 
+https://them1ddlem1n.github.io/project-idea-gen/
+
+
+Enjoy!
