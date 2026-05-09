@@ -137,7 +137,8 @@ body {
   color: var(--muted);
 }
 
-#category {
+#category,
+#difficulty {
   padding: 0.6rem 0.8rem;
   border-radius: 999px;
   border: 1px solid var(--border);
@@ -148,7 +149,8 @@ body {
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, transform 0.1s ease;
 }
 
-#category:focus {
+#category:focus,
+#difficulty:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 1px var(--accent-soft);
   transform: translateY(-1px);
@@ -182,6 +184,28 @@ body {
   margin: 0;
   color: var(--muted);
 }
+
+.category-pill {
+  display: inline-block;
+  margin-top: 0.55rem;
+  font-size: 0.72rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  min-height: 1.4em;
+  transition: opacity 0.2s ease;
+}
+
+.pill-python  { background: rgba(59,130,246,0.15); border-color: rgba(59,130,246,0.5); color: #93c5fd; }
+.pill-web     { background: rgba(56,189,248,0.15); border-color: rgba(56,189,248,0.5); color: #7dd3fc; }
+.pill-games   { background: rgba(168,85,247,0.15); border-color: rgba(168,85,247,0.5); color: #d8b4fe; }
+.pill-tools   { background: rgba(251,191,36,0.15); border-color: rgba(251,191,36,0.5); color: #fde68a; }
+.pill-ai      { background: rgba(34,197,94,0.15);  border-color: rgba(34,197,94,0.5);  color: #86efac; }
+.pill-mobile  { background: rgba(249,115,22,0.15); border-color: rgba(249,115,22,0.5); color: #fdba74; }
+.pill-api     { background: rgba(236,72,153,0.15); border-color: rgba(236,72,153,0.5); color: #f9a8d4; }
+.pill-cli     { background: rgba(148,163,184,0.15);border-color: rgba(148,163,184,0.5);color: #cbd5e1; }
 
 .buttons {
   display: flex;
@@ -249,7 +273,12 @@ body {
   font-size: 0.8rem;
   color: var(--muted);
   min-height: 1em;
+  transition: color 0.2s ease;
 }
+
+.diff-beginner     { color: #86efac; }
+.diff-intermediate { color: #fde68a; }
+.diff-advanced     { color: #fca5a5; }
 
 .favourites {
   margin-top: 1.3rem;
@@ -270,6 +299,25 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.fav-count-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.2em;
+  padding: 0 0.35em;
+  height: 1.2em;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #020617;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .tiny-btn {
@@ -286,6 +334,28 @@ body {
 .tiny-btn:hover {
   border-color: var(--accent);
   color: var(--text);
+}
+
+.fav-search {
+  width: 100%;
+  margin-bottom: 0.6rem;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text);
+  font-size: 0.82rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fav-search::placeholder {
+  color: var(--muted);
+}
+
+.fav-search:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-soft);
 }
 
 .fav-list {
@@ -318,6 +388,13 @@ body {
   gap: 0.4rem;
   align-items: flex-start;
   animation: favIn 0.25s ease-out;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.fav-item:hover {
+  border-color: var(--accent);
+  background: rgba(15, 23, 42, 0.98);
 }
 
 .fav-bullet {
@@ -330,12 +407,27 @@ body {
   flex: 1;
 }
 
+.fav-remove {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.7rem;
+  padding: 0 0.2rem;
+  line-height: 1;
+  border-radius: 4px;
+  transition: color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.fav-remove:hover {
+  color: #fca5a5;
+}
+
 .fav-empty {
   font-size: 0.8rem;
   color: var(--muted);
 }
-
-/* Footer */
 
 .footer {
   position: relative;
@@ -354,8 +446,6 @@ body {
 .footer a:hover {
   text-decoration: underline;
 }
-
-/* Animations */
 
 @keyframes cardIn {
   from {
@@ -389,8 +479,6 @@ body {
     transform: translateY(0);
   }
 }
-
-/* Small screens */
 
 @media (max-width: 640px) {
   .card {
