@@ -22,35 +22,57 @@
         <div class="controls-row">
           <div class="control-group">
             <label for="category">Category</label>
-            <select id="category">
+            <select id="category" aria-label="Select category">
               <option value="random">Random</option>
               <option value="python">Python</option>
               <option value="web">Web</option>
               <option value="games">Games</option>
               <option value="tools">Tools</option>
+              <option value="ai">AI / ML</option>
+              <option value="mobile">Mobile</option>
+              <option value="api">APIs</option>
+              <option value="cli">CLI</option>
             </select>
           </div>
-          <button id="surprise-btn" class="ghost-btn">🎲 Surprise</button>
+          <div class="control-group">
+            <label for="difficulty">Difficulty</label>
+            <select id="difficulty" aria-label="Select difficulty">
+              <option value="all">All</option>
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate">Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </div>
+          <button id="surprise-btn" class="ghost-btn" aria-label="Surprise me">🎲 Surprise</button>
         </div>
       </div>
 
       <div id="idea-box" class="idea-box">
-        <p class="idea-placeholder">Click “Generate Idea” to get started ✨</p>
+        <p class="idea-placeholder">Click "Generate Idea" to get started ✨</p>
       </div>
+      <span id="category-pill" class="category-pill"></span>
 
       <div class="buttons">
         <button id="generate-btn">Generate Idea</button>
-        <button id="fav-btn" class="icon-btn" title="Add to favourites">♡</button>
-        <button id="copy-btn" class="ghost-btn">Copy</button>
+        <button id="fav-btn" class="icon-btn" aria-label="Add to favourites">♡</button>
+        <button id="copy-btn" class="ghost-btn" aria-label="Copy idea">Copy</button>
+        <button id="share-btn" class="ghost-btn" aria-label="Share idea">Share</button>
       </div>
 
       <p id="status" class="status" aria-live="polite"></p>
 
       <div class="favourites">
         <div class="fav-header">
-          <h2>Favourites</h2>
+          <h2>Favourites <span id="fav-count" class="fav-count-badge"></span></h2>
           <button id="clear-fav" class="tiny-btn">Clear</button>
         </div>
+        <input
+          id="fav-search"
+          class="fav-search"
+          type="search"
+          placeholder="Search favourites…"
+          aria-label="Search favourites"
+        />
         <ul id="fav-list" class="fav-list">
           <li class="fav-empty">No favourites yet. Save ideas you like ⭐</li>
         </ul>
