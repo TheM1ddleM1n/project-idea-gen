@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Idea Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <h1>Project Idea Generator</h1>
+    <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="controls">
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="random">Random</option>
+          <option value="python">Python</option>
+          <option value="web">Web</option>
+          <option value="games">Games</option>
+          <option value="tools">Tools</option>
+        </select>
+      </div>
+
+      <div id="idea-box" class="idea-box">
+        Click “Generate Idea” to get started ✨
+      </div>
+
+      <div class="buttons">
+        <button id="generate-btn">Generate Idea</button>
+        <button id="copy-btn">Copy Idea</button>
+      </div>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built with ❤️ by TheM1ddleM1n</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
