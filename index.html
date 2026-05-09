@@ -7,39 +7,62 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg-orbit"></div>
+
   <header class="top-bar">
     <h1>Project Idea Generator</h1>
-    <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    <span class="badge">Dark • Minimal</span>
   </header>
 
   <main class="container">
     <section class="card">
+      <div class="card-glow"></div>
+
       <div class="controls">
-        <label for="category">Category</label>
-        <select id="category">
-          <option value="random">Random</option>
-          <option value="python">Python</option>
-          <option value="web">Web</option>
-          <option value="games">Games</option>
-          <option value="tools">Tools</option>
-        </select>
+        <div class="controls-row">
+          <div class="control-group">
+            <label for="category">Category</label>
+            <select id="category">
+              <option value="random">Random</option>
+              <option value="python">Python</option>
+              <option value="web">Web</option>
+              <option value="games">Games</option>
+              <option value="tools">Tools</option>
+            </select>
+          </div>
+          <button id="surprise-btn" class="ghost-btn">🎲 Surprise</button>
+        </div>
       </div>
 
       <div id="idea-box" class="idea-box">
-        Click “Generate Idea” to get started ✨
+        <p class="idea-placeholder">Click “Generate Idea” to get started ✨</p>
       </div>
 
       <div class="buttons">
         <button id="generate-btn">Generate Idea</button>
-        <button id="copy-btn">Copy Idea</button>
+        <button id="fav-btn" class="icon-btn" title="Add to favourites">♡</button>
+        <button id="copy-btn" class="ghost-btn">Copy</button>
       </div>
 
       <p id="status" class="status" aria-live="polite"></p>
+
+      <div class="favourites">
+        <div class="fav-header">
+          <h2>Favourites</h2>
+          <button id="clear-fav" class="tiny-btn">Clear</button>
+        </div>
+        <ul id="fav-list" class="fav-list">
+          <li class="fav-empty">No favourites yet. Save ideas you like ⭐</li>
+        </ul>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Built with ❤️ by TheM1ddleM1n</p>
+    <p>
+      Built with ❤️ by <a href="https://github.com/TheM1ddleM1n" target="_blank">TheM1ddleM1n</a> ·
+      <a href="https://them1ddlem1n.github.io/project-idea-gen/" target="_blank">Live Demo</a>
+    </p>
   </footer>
 
   <script src="script.js"></script>
