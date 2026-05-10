@@ -3,7 +3,7 @@
 A clean, dark‑themed web app that generates random coding project ideas across multiple categories.  
 Perfect for developers who want inspiration, students looking for practice projects, or anyone stuck on what to build next.
 
-🔗 **Live Demo!:**  
+🔗 **Live Demo:**  
 https://them1ddlem1n.github.io/project-idea-gen/
 
 ---
