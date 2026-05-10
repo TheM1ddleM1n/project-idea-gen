@@ -305,7 +305,6 @@ const difficultyMap = {
   "Build a browser-based stopwatch with laps.": "Beginner",
   "Create a JSON formatter and validator.": "Beginner",
   "Build a base64 encoder/decoder.": "Beginner",
-  "Make a regex tester with live match highlighting.": "Intermediate",
   "Create a color contrast accessibility checker.": "Intermediate",
   "Build a word frequency analyser.": "Beginner",
   "Make a timezone world clock dashboard.": "Intermediate",
