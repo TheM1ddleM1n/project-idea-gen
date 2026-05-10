@@ -411,7 +411,6 @@ const favBtn = document.getElementById("fav-btn");
 const favList = document.getElementById("fav-list");
 const favCount = document.getElementById("fav-count");
 const clearFavBtn = document.getElementById("clear-fav");
-const surpriseBtn = document.getElementById("surprise-btn");
 const favSearch = document.getElementById("fav-search");
 const categoryPill = document.getElementById("category-pill");
 
@@ -506,7 +505,6 @@ function generateIdea(randomCategory = false) {
 }
 
 generateBtn.addEventListener("click", () => { generateIdea(false); });
-surpriseBtn.addEventListener("click", () => { generateIdea(true); });
 categorySelect.addEventListener("change", () => { generateIdea(false); });
 
 copyBtn.addEventListener("click", async () => {
