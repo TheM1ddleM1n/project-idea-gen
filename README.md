@@ -58,7 +58,6 @@ You can fork it and deploy your own version easily.
 
 ## 📄 License
 This project is licensed under the MIT License.
-See the LICENSE file for details.
 
 ### Built with ❤️ by TheM1ddleM1n  
 
